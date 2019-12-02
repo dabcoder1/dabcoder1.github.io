@@ -1,0 +1,993 @@
+/*
+****** Table of Content ******
+1-) Base CSS
+
+2-) Header CSS
+2.1)  Logo CSS
+2.2)  Mainmenu CSS
+2.3)  SlickNav CSS
+2.4)  Search CSS
+
+3-) Banner section
+
+4-) Main Content CSS
+4.1)  Pagination CSS
+4.2)  Responsive Pagination CSS
+
+5-) Footer CSS
+5.1)  Devider Border
+
+6-) Common CSS
+
+7-) Single Page CSS
+7.1)  Single Post CSS
+7.2)  Author Details CSS
+7.3)  Next - Previous Posts
+7.4)  Comment Section
+
+8-) Responsive CSS
+8.1)  Desktop / HD Television
+8.2)  Laptop with HiDPI / MDPI / Touch
+8.3)  iPad Pro *12.9-inch*
+8.4)  Mobile Screen
+8.5)  Mobile Wide Screen
+8.6)  Small Mobile Screen
+
+*********************************
+*/
+
+/* ========= 1- Start Base CSS ========= */
+*{margin: 0; padding: 0; outline: 0;}
+
+@import url('https://fonts.googleapis.com/css?family=Lato:700|Metrophobic&display=swap');/* ---- Google Fonts ---- */
+body{
+    width: 100%;
+    background-color:#fff;
+    background-image: url("../images/crossline-dots.png");
+    background-position: center;
+    background-repeat: repeat;
+    overflow-x: hidden;
+    font-size: 15px;
+    font-family: 'Metrophobic', sans-serif;
+}
+html, body{
+    height: 100%;
+}
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 15px;
+    font-family: 'Lato', sans-serif;
+}
+a, a:active, a:hover, a:visited, a:focus{
+    color: #333;
+    text-decoration: none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+section{
+    width: 100%;
+    padding: 50px 0;
+}
+.text-center{
+    text-align: center;
+}
+/* ========= End Base CSS ========= */
+
+
+/* ========= 2- Header CSS ========= */
+header{
+    width: 100%;
+    min-height: 35px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    border-bottom: .5px solid #fff;
+    padding: 15px 10px;
+    grid-gap: 2em;
+}
+
+/* ---- 2.1 -Logo CSS ---- */
+header .logo{
+    //border: 1px solid #f00;
+}
+header .logo a{
+    color: #fff;
+}
+header .logo img {
+    width: 150px;
+    margin-left: 30px;
+}
+/* ---- 2.2 -Mainmenu CSS ---- */
+header .mainmenu{
+    margin-left: 30px;
+}
+header .mainmenu ul li{
+    margin-top: 10px;
+	float: left;
+	display: inline-block;
+}
+header .mainmenu ul li a{
+    color: #fff;
+    display: inline-block;
+    padding: 10px 0px;
+    border-bottom: 1px solid transparent;
+    transition: .5s;
+    margin: 0 15px;
+}
+header .mainmenu ul li a:hover{
+    border-bottom: 1px solid #fff;
+}
+
+/* ---- 2.3 -SlickNav CSS ---- */
+.slicknav_menu{
+    display: none;
+}
+
+/* ---- 2.4 -Search CSS ---- */
+header .search{
+    margin-top: 13px;
+}
+.search input[type="search"] {
+    padding: 7px 5px;
+    color: #000;
+    border: 1px solid #fff;
+    width: 80%;
+    padding-right: 30px;
+}
+.search input[type="submit"] {
+    text-indent: -99px;
+    padding: 7px 15px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: -35px;
+    position: relative;
+    z-index: 2;
+}
+.search i {
+    color: #000000;
+    font-size: 18px;
+    margin-left: -25px;
+}
+
+/* ========== 3- Banner section ========== */
+.banner_area{
+    padding: 0;
+    height: 450px;
+    display: table;
+    background-color: #000;
+    background-image: url("../images/banner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+}
+.banner_area:after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: .8;
+}
+.banner_content{
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    color: #fff;
+}
+.banner_content h1 {
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+.banner_content p {
+    font-size: 18px;
+}
+.banner_content a {
+    color: #fff;
+    padding: 10px 30px;
+    display: inline-block;
+    transition: .5s;
+    margin-top: 25px;
+}
+
+
+
+/* ========= 4- Main Content CSS ========= */
+section.main_content_area{
+    //overflow: hidden;
+}
+section .all_posts{
+    width: 70%;
+    margin: 0 auto; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2em;
+    grid-auto-rows: minmax(400px, auto);
+}
+.top_text{
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 30px 0 40px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    color: #fff;
+    position: relative;
+}
+.top_text:after{
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: 20px;
+    width: 100px;
+    height: 5px;
+    margin-left: -50px;
+}
+.top_text h2{
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+.top_text p{margin: 0; font-size: 16px;}
+
+.single_post{
+    border: 1px solid #fff;
+    padding-bottom: 20px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 10px 30px -6px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 10px 30px -6px rgba(0,0,0,0.3);
+    box-shadow: 0px 10px 30px -6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    position: relative;
+}
+.post_thumbnail{
+    width: 100%;
+    height: 220px;
+}
+.post_thumbnail img{
+    width: 100%;
+    height: 220px;
+    border-radius: 10px 10px 0 0;
+}
+.single_post h2,
+.single_post p,
+.single_post a{
+    padding: 0 15px;
+}
+.post_thumbnail a{
+    padding: 0;
+}
+.single_post h2 a::first-letter,
+.single_post p::first-letter,
+.author_details h3::first-letter,
+.author_details p::first-letter{
+    text-transform: capitalize;
+}
+.single_post h2 a{
+    margin-top: 20px;
+    font-size: 22px;
+    padding-left: 0;
+    color: #1E6CD9;
+    display: inline-block;
+    transition: .5s;
+    
+}
+.single_post p{
+    line-height: 22px;
+}
+.single_post a.read_more_btn {
+    color: #1E6CD9;
+    transition: .5s;
+    margin-top: 10px;
+    display: inline-block;
+}
+.single_post a:hover{
+    color: #000;
+}
+.single_post i {
+    display: inline-block;
+    transition: .5s;
+}
+.single_post a:hover i{
+    right: -8px;
+}
+
+/* ========= 4.1 pagination CSS ========= */
+.pagination{
+    margin-top: 100px;
+}
+.pgn {
+   margin: 3rem auto;
+   text-align: center;
+}
+
+.pgn ul {
+   display: inline-block;
+   list-style: none;
+   margin-left: 0;
+   position: relative;
+   padding: 0 6rem;
+}
+
+.pgn ul li {
+   display: inline-block;
+   margin: 0;
+   padding: 0;
+}
+
+.pgn__num {
+   font-family: "metropolis-bold", sans-serif;
+   font-size: 22px;
+   line-height: 2.4rem;
+   display: inline-block;
+   padding: 5px 10px;
+   margin: .3rem .15rem;
+   color: #151515;
+   border-radius: 3px;
+   -webkit-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+}
+
+.pgn__num:hover {
+   background: #c4c4c4;
+   color: #151515;
+}
+
+.pgn .current, .pgn .current:hover {
+   background-color: #151515;
+   color: #FFFFFF;
+}
+
+.pgn .inactive, .pgn .inactive:hover {
+   color: #888888;
+   cursor: default;
+}
+
+.pgn__prev, .pgn__next {
+   display: block;
+   background-color: #FFFFFF;
+   background-repeat: no-repeat;
+   background-size: 18px 12px;
+   background-position: center;
+   height: 3.8rem;
+   width: 3.8rem;
+   line-height: 4.8rem;
+   padding: 0;
+   margin: 0;
+   border-radius: 50%;
+   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+   font: 0/0 a;
+   text-shadow: none;
+   color: transparent;
+   -webkit-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+   position: absolute;
+   top: 50%;
+   -webkit-transform: translateY(-50%);
+   -ms-transform: translateY(-50%);
+   transform: translateY(-50%);
+}
+
+.pgn__prev:hover, .pgn__next:hover {
+   background-color: #151515;
+   color: #FFFFFF;
+   text-decoration: none;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.pgn__prev {
+   background-image: url("../images/pgn_icons/icon-arrow-left.svg");
+   left: 0;
+}
+
+.pgn__prev:hover {
+   background-image: url("../images/pgn_icons/icon-arrow-left-w.svg");
+}
+
+.pgn__next {
+   background-image: url("../images/pgn_icons/icon-arrow-right.svg");
+   right: 0;
+}
+
+.pgn__next:hover {
+   background-image: url("../images/pgn_icons/icon-arrow-right-w.svg");
+}
+
+.pgn__prev.inactive, .pgn__next.inactive {
+   background-color: #ffffff;
+   opacity: 0.5;
+   cursor: default;
+}
+
+.pgn__prev.inactive:hover {
+   background-image: url("../images/icons/icon-arrow-left.svg");
+}
+
+.pgn__next.inactive:hover {
+   background-image: url("../images/icons/icon-arrow-right.svg");
+}
+
+/* ========= 4.2 Responsive Pagination CSS ========= */
+@media only screen and (max-width:600px) {
+   .pgn ul {
+      padding: 0 5rem;
+   }
+
+   .pgn__prev, .pgn__next {
+      height: 3.6rem;
+      width: 3.6rem;
+      line-height: 3.6rem;
+      background-size: 12px 8px;
+   }
+
+}
+
+/* ========= 5- Footer CSS ========= */
+footer{
+    width: 100%;
+    padding-top: 50px;
+    color: #fff;
+}
+footer .footer_top {
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2em;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+footer .single_widget{
+    
+}
+
+footer .single_widget ul li{}
+footer .single_widget ul li a{
+    display: inline-block;
+    color: #fff;
+    padding: 3px 0;
+    transition: .5s;
+}
+footer .single_widget ul li a:hover{
+    color: #aaa;
+    margin-left: 5px;
+}
+footer .single_widget i{
+    margin-right: 5px;
+}
+footer .single_widget p{
+    font-size: 16px;
+    line-height: 22px;
+}
+
+/* --------- 5.1 -Devider Border --------- */
+footer .db{
+    width: 100%;
+    height: 3px;
+    background: #000000;
+    background: -moz-linear-gradient(left,  #000000 15%, #ffffff 50%, #2072e5 85%);
+    background: -webkit-linear-gradient(left,  #000000 15%,#ffffff 50%,#2072e5 85%);
+    background: linear-gradient(to right,  #000000 15%,#ffffff 50%,#2072e5 85%);
+    overflow: hidden;
+}
+
+footer .footer_bottom {
+    width: 100%;
+    padding: 15px 0;
+    overflow: hidden;
+}
+footer .footer_bottom_content{
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-row-gap: 2em;
+}
+footer .footer_bottom_content p{
+    margin-top: 10px;
+    word-spacing: 3px;
+}
+footer .social_icons{
+}
+footer .footer_bottom_content ul{
+    float: right;
+}
+footer .footer_bottom_content ul li{
+    float: left;
+}
+footer .footer_bottom_content ul li a{
+    display: block;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    background-color: #fff;
+    margin: 0 5px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: .5s;
+}
+footer .footer_bottom_content ul li a:hover{
+    background-color: transparent;
+    color: #fff;
+}
+footer .footer_bottom_content a#site_link{
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 3px;
+    transition: .5s;
+}
+footer .footer_bottom_content a#site_link:hover{
+    border: none;
+    color: #aaa;
+}
+
+
+/*======== 6- Common CSS ========*/
+header,
+section.banner_area:after,
+.banner_content a,
+section .top_text,
+.slicknav_nav, .slicknav_nav ul{
+    background: #2072e5;
+    background: -moz-linear-gradient(left,  #2072e5 0%, #000000 100%);
+    background: -webkit-linear-gradient(left,  #2072e5 0%,#000000 100%);
+    background: linear-gradient(to right,  #2072e5 0%,#000000 100%);
+}
+
+.banner_content a:hover,
+section .top_text:after,
+footer,
+footer .footer_bottom{
+    background: #2072e5;
+    background: -moz-linear-gradient(left,  #000000 0%, #2072e5 100%);
+    background: -webkit-linear-gradient(left,  #000000 0%,#2072e5 100%);
+    background: linear-gradient(to right,  #000000 0%,#2072e5 100%);
+}
+
+
+
+/*==========================================
+=========== 7- Single Page CSS ==============
+===========================================*/
+section.single_post_page .all_posts{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    
+    
+}
+section.single_post_page .top_text,
+section.category_page .top_text{
+    width: 100%;
+    padding: 30px 0 40px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    color: #fff;
+    position: relative;
+}
+section.single_post_page,
+section.category_page{
+    background-color: #F2F2F2;
+    padding-top:0;
+}
+section.single_post_page span{
+    color: #fff;
+    
+}
+section.single_post_page a{
+    color: #fff;
+    
+}
+
+/*-------- 7.1 -Single Post CSS --------*/
+.single_post_details{
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+}
+.single_post_thumbnail{
+    width: 100%;
+    height: auto;
+}
+.single_post_thumbnail img{
+    width: 100%;
+    height: auto;
+}
+.single_post_details h2{
+    margin-top: 30px;
+    display: block;
+}
+.single_post_details p{
+    margin-bottom: 15px;
+}
+
+/*-------- 7.2 -Author Details CSS --------*/
+.author_details{
+    position: relative;
+    width: 87%;
+    min-height: 200px;
+    padding-left: 100px;
+    margin-top: 100px;
+    padding-top: 15px;
+}
+.author_pic{
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 80px;
+    height: 80px;
+    border: 3px solid #ddd;
+    border-radius: 50%;
+}
+.author_pic img{
+    border-radius: 50%;
+}
+.author_details h3{
+    text-transform: capitalize;
+}
+.author_details p{}
+.author_details ul li {
+    float: left;
+    display: inline-block;
+    margin-right: 15px;
+}
+.author_details ul li a {
+    display: block;
+    color: #333;
+    font-weight: 700;
+    padding-bottom: 5px;
+    transition: .3s;
+    border-bottom: 1px solid transparent;
+}
+.author_details ul li a:hover {
+    border-bottom: 1px solid #333;
+}
+
+/*-------- 7.3 -Next - Previous Posts --------*/
+.np_post_links{
+    width: 100%;
+    border-top: 1px solid #000;
+    padding-top: 15px;
+    overflow: hidden;
+}
+.np_post_links a{
+    color: #333 !important;
+}
+.np_post_links span{
+    color: #555 !important;
+    
+}
+.np_post_links a h4{
+    font-size: 18px;
+    margin-top: 7px;
+    
+}
+.prev_post{
+    float: left;
+}
+.next_post{
+    float: right;
+}
+
+/*-------- 7.4 -Comment Section --------*/
+.comment_box{
+    margin-top: 150px;
+}
+.comment_box table{
+    width: 100%;
+}
+.comment_box #input_titles{
+    width: 10%;
+    font-size: 16px;
+    font-weight: 700;
+}
+.comment_box #input_fields{
+    width: 90%;
+}
+.comment_box #name,
+.comment_box #email,
+.comment_box #msg{
+    width: 97%;
+    padding: 10px;
+    border: 1px solid #2071E2;
+    margin: 5px 0;
+    font-size: 16px;
+}
+.comment_box #submit_btn{
+    padding: 10px 25px;
+    border: 1px solid #2071E2;
+    background-color: #fff;
+    color: #333;
+    float: right;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .5s;
+    margin-right: 5px;
+}
+.comment_box #submit_btn:hover{
+    background-color: #2071E2;
+    color: #fff;
+}
+
+
+
+
+/*==========================================
+=========== 8- Responsive CSS ==============
+===========================================*/
+
+/* ---------- 8.1 -Desktop / HD Television ----------*/
+@media only screen and (min-width:1279px) and (max-width:1552px){
+
+    .single_post_details{
+        width: 80%;
+    }
+    
+    
+}
+
+/* ---------- 8.2 -Laptop with HiDPI / MDPI / Touch ----------*/
+@media only screen and (min-device-width:1023px) and (max-width:1280px){
+    section .all_posts,
+    footer .footer_top{
+        grid-template-columns: 1fr 1fr;
+    }
+    .single_post_details{
+        width: 70%;
+    }
+    
+}
+
+/* ---------- 8.3 -iPad Pro *12.9-inch* ----------*/
+@media only screen and (min-width:769px) and (max-width:1024px){
+    section .all_posts,
+    footer .footer_top{
+        grid-template-columns: 1fr;
+    }
+    header{
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+    header .logo{
+        grid-column: 1/3;
+        min-height: 60px;
+        justify-self: center;
+		margin-left: 130px;
+    }
+    
+    header .mainmenu {
+        display: none;
+    }
+    .slicknav_menu{
+        display: block;
+        position: fixed;
+        left: -5px;
+        top: 15px;
+        z-index: 99999;
+        background: transparent;
+        width: 200px;
+    }
+    a.slicknav_btn.slicknav_collapsed,
+    a.slicknav_btn.slicknav_open{
+        float: left;
+        margin-bottom: 28px;
+        padding: 12px;
+        margin-left: 20px;
+        background-color: #000;
+    }
+    .slicknav_nav, .slicknav_nav ul {
+        padding: 10px 5px 12px 15px;
+    }
+    .slicknav_nav a{
+        border-bottom: 1px solid transparent;
+        transition: .3s;
+        color: #fff;
+        padding-left: 0;
+    }
+    .slicknav_nav a:hover {
+        border-radius: 0;
+        color: #fff;
+        background-color: transparent;
+        border-bottom: 1px solid #fff;
+    }
+    
+    .single_post_details{
+        width: 85%;
+    }
+    
+    
+    footer .footer_bottom_content{
+        grid-template-columns: 100%;
+    }
+    footer .footer_bottom_content div{
+        justify-self: center;
+    }
+    
+    
+}
+
+/* ---------- 8.4 -Mobile Screen ----------*/
+@media only screen and (min-width : 480px) and (max-width:768px){
+    section .all_posts,
+    footer .footer_top{
+        grid-template-columns: 1fr;
+    }
+    
+    header .logo{
+        grid-column: 1/4;
+        min-height: 60px;
+        justify-self: center;
+    }
+    header .mainmenu {
+        display: none;
+    }
+	header .search {
+		grid-column: 1/5;
+		justify-self: center;
+		margin: 0;
+		width: 100%;
+	}
+	
+    .slicknav_menu{
+        display: block;
+        position: fixed;
+        left: -5px;
+        top: 15px;
+        z-index: 99999;
+        background: transparent;
+        width: 200px;
+    }
+    a.slicknav_btn.slicknav_collapsed,
+    a.slicknav_btn.slicknav_open{
+        float: left;
+        margin-bottom: 28px;
+        padding: 12px;
+        margin-left: 20px;
+        background-color: #000;
+    }
+    .slicknav_nav, .slicknav_nav ul {
+        padding: 10px 5px 12px 15px;
+    }
+    .slicknav_nav a{
+        border-bottom: 1px solid transparent;
+        transition: .3s;
+        color: #fff;
+        padding-left: 0;
+    }
+    .slicknav_nav a:hover {
+        border-radius: 0;
+        color: #fff;
+        background-color: transparent;
+        border-bottom: 1px solid #fff;
+    }
+    
+    .single_post_details{
+        width: 95%;
+    }
+    .comment_box #name,
+    .comment_box #email,
+    .comment_box #msg{
+        width: 92%;
+    }
+    .comment_box #submit_btn{
+        margin-right: 30px;
+    }
+    
+    footer .footer_bottom_content{
+        grid-template-columns: 100%;
+    }
+    footer .footer_bottom_content div{
+        justify-self: center;
+    }
+    
+    
+}
+
+/* ---------- 8.5 -Mobile Wide Screen ----------*/
+@media only screen and (max-width:768px){
+    section .all_posts,
+    footer .footer_top{
+        grid-template-columns: 1fr;
+    }
+    
+    header .logo{
+        grid-column: 1/4;
+        min-height: 60px;
+        justify-self: center;
+    }
+    header .mainmenu {
+        display: none;
+    }
+	header .search {
+		grid-column: 1/5;
+		justify-self: center;
+		margin: 0;
+		width: 100%;
+	}
+	.search input[type="search"] {
+		width: 97%;
+	}
+	
+	
+    .slicknav_menu{
+        display: block;
+        position: fixed;
+        left: -5px;
+        top: 15px;
+        z-index: 99999;
+        background: transparent;
+        width: 200px;
+    }
+    a.slicknav_btn.slicknav_collapsed,
+    a.slicknav_btn.slicknav_open{
+        float: left;
+        margin-bottom: 28px;
+        padding: 12px;
+        margin-left: 20px;
+        background-color: #000;
+    }
+    .slicknav_nav, .slicknav_nav ul {
+        padding: 10px 5px 12px 15px;
+    }
+    .slicknav_nav a{
+        border-bottom: 1px solid transparent;
+        transition: .3s;
+        color: #fff;
+        padding-left: 0;
+    }
+    .slicknav_nav a:hover {
+        border-radius: 0;
+        color: #fff;
+        background-color: transparent;
+        border-bottom: 1px solid #fff;
+    }
+    
+    .single_post_details{
+        width: 95%;
+    }
+    .comment_box #name,
+    .comment_box #email,
+    .comment_box #msg{
+        width: 92%;
+    }
+    
+    
+    footer .footer_bottom_content{
+        grid-template-columns: 100%;
+    }
+    footer .footer_bottom_content div{
+        justify-self: center;
+    }
+    
+}
+
+/* ---------- 8.6 -Small Mobile Screen ----------*/
+@media only screen and (max-width:479px){
+    .search input[type="search"] {
+		width: 94%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

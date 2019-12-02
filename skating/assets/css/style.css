@@ -1,0 +1,680 @@
+/*=========================================
+=========== [ Core CSS ] ===========
+==========================================*/
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 15px;
+    color: #000;
+    overflow-x: hidden;
+}
+html, body{ height: 100%;}
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a, a:focus, a:active, a:checked, a:hover{
+    color: #000;
+    text-decoration: none;
+}
+img{max-width: 100%;}
+.blank_space{
+    width: 100%;
+    height: 50px;
+}
+.bg_size{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+section{
+    width: 100%;
+    padding: 80px 0;
+}
+.top_text{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.top_text h2{
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.top_text p{}
+/*=========================================
+=========== [ Theme CSS Start ] ===========
+==========================================*/
+
+/*=========== [ Hero Area ] ===========*/
+body section.hero div{
+    height: 100%;
+}
+.hero{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    position: relative;
+    padding: 0;
+}
+.hero span.one,
+.hero span.four{
+    width: 50px;
+    height: 50px;
+    border-right: 2px solid #fff;
+    border-left: 2px solid #fff;
+    position: absolute;
+    border-radius: 100%;
+    z-index: 2;
+}
+.hero span.one{
+    right: 100px;
+    top: 100px;
+    -webkit-animation: skt_circle_one 1.2s infinite ease-in-out;
+    animation: skt_circle_one 2s infinite ease-in-out;
+}
+@keyframes skt_circle_one,
+@keyframes skt_circle_four{
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        transform:  rotate(360deg);
+        -webkit-transform:  rotate(360deg);
+    }
+}
+@keyframes skt_circle_one {
+    0% {
+        top: 0;
+        right: 0;
+    }
+    50% {
+        top: 210px;
+        right: 210px;
+    }
+    100% {
+        top: 100px;
+        right: 100px;
+        opacity: 0;
+    }
+}
+.hero span.four{
+    left: 100px;
+    bottom: 100px;
+    -webkit-animation: skt_circle_four 1.2s infinite ease-in-out;
+    animation: skt_circle_four 2s infinite ease-in-out;
+}
+@keyframes skt_circle_four {
+    0% {
+        bottom: 0;
+        left: 0;
+    }
+    50% {
+        bottom: 210px;
+        left: 210px;
+    }
+    100% {
+        bottom: 100px;
+        left: 100px;
+        opacity: 0;
+    }
+}
+.hero span.two,
+.hero span.three{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    z-index: 2;
+    border-radius: 100%;
+}
+.hero span.two{
+    border-left: .5px solid #f00;
+    border-bottom: .5px solid #fff;
+    right: 0;
+    top: 0;
+}
+
+.hero span.three{
+    border-right: .5px solid #f00;
+    border-top: .5px solid #fff;
+    left: 0;
+    bottom: 0;
+}
+.single_slider{
+    position: relative;
+    z-index: 5;
+}
+.single_slider:after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .5;
+    z-index: -1;
+}
+.hero_table{
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+.table_cell{
+    display: table-cell;
+    vertical-align: middle;
+    
+}
+.hero h1{
+    font-size: 70px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.hero p{
+    font-size: 22px;
+    margin: 10px 0 30px;
+}
+.hero a{
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px 30px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    transition: .3s;
+}
+.hero a:hover{
+    background-color: transparent;
+    color: #fff;
+}
+/* === Owl Carousel === */
+.hero_slider .owl-dots {
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+    margin-bottom: -60px;
+    width: 70px;
+    height: 120px;
+}
+.hero_slider button.owl-dot {
+    width: 30px;
+    height: 30px;
+    margin: 7px;
+    display: block;
+    color: #000;
+    font-size: 18px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    color: #fff;
+    outline: 0;
+    transition: .3s;
+}
+.hero_slider button.owl-dot:hover,
+.hero_slider button.owl-dot.active{
+    color: #000;
+    background-color: #fff;
+}
+
+/*=========== [ Logo and Navigation Area ] ===========*/
+div.logo_navigation{
+    padding: 0;
+    border-bottom: 1px solid #4d4d4d;
+}
+.logo_navigation img{
+    width: 100px;
+    height: 100px;
+    padding: 10px 0;
+}
+.logo_navigation nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.logo_navigation nav ul li{
+    display: inline-block;
+}
+.logo_navigation nav ul li a{
+    display: block;
+    margin-left: 1px;
+    padding: 37px 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: .3s;
+}
+.logo_navigation nav ul li a.active,
+.logo_navigation nav ul li a:hover{
+    background-color: #4d4d4d;
+    color: #fff;
+}
+
+/* ===== Sticky Header =====*/
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    transition: .3s;
+}
+
+.sticky + .content {
+    padding-top: 190px;
+}
+.sticky + .abt_content {
+    padding-top: 250px;
+}
+
+/*=========== [ About Area ] ===========*/
+.about_area{
+    background-image: url(../img/hero_image_3.jpeg);
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+.about_area:after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .7;
+    z-index: -1;
+}
+.about_area div.col-md-3.left,
+.about_area div.col-md-3.right{
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+.about_area div.col-md-3.left:after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    border-right: 250px solid transparent;
+    border-top: 199px solid #ffffffb5;
+    border-left: 25px solid #ffffffb5;
+    border-bottom: 199px solid #ffffffb5;
+    
+}
+.about_area div.col-md-3.right:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    border-right: 25px solid #ffffffb5;
+    border-top: 199px solid #ffffffb5;
+    border-left: 250px solid transparent;
+    border-bottom: 199px solid #ffffffb5;
+}
+.about_text h2{
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+/*=========== [ Services Area ] ===========*/
+.services_area{
+    background-image: url(../img/gravel.png);
+}
+.services_area .top_text{
+    margin-bottom: 20px;
+}
+.single_service{
+    margin-top: 30px;
+    border: 1px solid #4d4d4d;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #fff;
+}
+.single_service img{
+    width: 100%;
+    height: 250px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #4d4d4d;
+}
+.single_service h3{
+    font-size: 22px;
+    text-transform: lowercase;
+    margin-bottom: 5px;
+    padding: 0 15px;
+}
+.single_service h3:first-letter{
+    text-transform: uppercase;
+}
+.single_service p{
+    padding: 0 15px 15px;
+}
+
+/*=========== [ Call To Action ] ===========*/
+.call_to_action{
+    background-color: #444;
+    color: #fff;
+    padding: 40px 0;
+}
+.call_to_action h2{
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+.call_to_action a{
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: .3s;
+}
+.call_to_action a:hover{
+    background-color: transparent;
+    color: #fff;
+}
+
+/*=========== [ Coaches Area ] ===========*/
+.coaches_area{
+    background-image: url(../img/hero_image_1.jpg);
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+}
+.coaches_area:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: -1;
+    opacity: .7;
+}
+.coaches_area .top_text{
+    color: #fff;
+}
+.single_coache{
+    width: 100%;
+    height: 350px;
+    position: relative;
+}
+.front{
+	position: absolute;
+	transform: perspective(600px) rotateY(0deg);
+	background: #999;
+	width: 100%;
+    height: 350px;
+	backface-visibility: hidden;
+	transition: transform 0.9s linear 0s;
+	text-align: center;
+    border-radius: 10px;
+}
+
+.back{
+	position: absolute;
+	transform: perspective(600px) rotateY(180deg);
+	width: 100%;
+    height: 350px;
+	backface-visibility: hidden;
+	transition: transform 0.9s linear 0s;
+	text-align: center;
+    padding: 15px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    display: table;
+    background-color: #fff;
+}
+.back_details{
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.back_details:after {
+    content: "";
+    position: absolute;
+    left: -120px;
+    top: 50px;
+    width: 115%;
+    height: 10px;
+    background-color: #ddd;
+    transform: rotate(-45deg);
+    z-index: -1;
+}
+.back_details:before {
+    content: "";
+    position: absolute;
+    left: -97px;
+    top: 50px;
+    width: 115%;
+    height: 10px;
+    background-color: #ddd;
+    transform: rotate(-45deg);
+    z-index: -1;
+}
+.back_details p{
+    margin: 10px 0 15px;
+}
+.social ul li{
+    display: inline-block;
+}
+.social ul li a{
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 35px;
+    margin: 0 2px;
+    transition: .3s;
+    border-radius: 3px;
+}
+.social ul li a:hover{
+    border-radius: 50%;
+}
+
+.single_coache:hover .front{
+	transform: perspective(600px) rotateY(-180deg);
+}
+
+.single_coache:hover .back{
+	transform: perspective(600px) rotateY(0deg);
+}
+.front img{
+    width: 100%;
+    height: 350px;
+    border-radius: 5px;
+}
+
+/*=========== [ Contacts Area ] ===========*/
+.contact_area{
+    background-color: #4d4d4d;
+    padding-bottom: 0px;
+}
+.contact_area .top_text{
+    color: #fff;
+}
+/*---Registration form---*/
+.registration_form,
+.login_form{
+    width: 100%;
+    padding: 20px;
+    border: 7px solid #fff;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+}
+.registration_form:after,
+.login_form:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #4d4d4d;
+    border-radius: 3px;
+    z-index: -1;
+}
+.registration_form label,
+.login_form label{
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-left: 3px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    font-size: 16px;
+}
+.registration_form h2,
+.login_form h2 {
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    font-weight: 700;
+    border-bottom: 3px solid #4d4d4d;
+    padding-bottom: 7px;
+    text-align: center;
+    border-radius: 10px;
+}
+.registration_form input,
+.login_form input{
+    width: 100%;
+    padding: 7px 10px;
+    border: .5px solid #ddd;
+    border-radius: 3px;
+    margin-bottom: 7px;
+    outline: 0;
+}
+.registration_form input:focus,
+.login_form input:focus{
+    border-color: #4d4d4d;
+}
+.submit_btn{
+    padding: 7px 10px;
+    background-color: #4d4d4d;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 5px;
+    transition: .3s;
+}
+.submit_btn:hover{
+    background-color: #222;
+}
+/*---Login form---*/
+.login_form a{
+    display: inline-block;
+    text-align: center;
+    margin-top: 5px;
+    border-bottom: 1px solid #777;
+    color: #777;
+}
+.login_form a:hover{
+    border-color: #000;
+    color: #000;
+}
+/*---Location Map---*/
+.location_map{
+    margin-top: 60px;
+}
+#map{
+    width: 100%;
+    height: 400px;
+}
+
+/*=========== [ Footer Area ] ===========*/
+.footer_top{
+    width: 100%;
+    padding: 70px 0;
+    border-top: 1px solid #000;
+}
+footer h4{
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+.footer_menu li a{
+    display: block;
+    padding: 5px 10px;
+    color: #000;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #4d4d4d;
+    border-radius: 5px;
+}
+.footer_menu li a:hover{
+    background-color: #4d4d4d;
+    color: #fff;
+}
+.instagram{}
+.instagram a{}
+.instagram img{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    padding: 3px;
+    margin: 2px 1px;
+}
+.subscriber input[type="email"]{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: 0;
+    margin-bottom: 5px;
+}
+.subscriber input[type="email"]:focus{
+    border-color: #000;
+}
+.subscriber input.submit_btn{
+    width: 100%;
+    padding: 10px;
+    background-color: #4d4d4d;
+    color: #fff;
+    border: 1px solid #ddd;
+    text-transform: uppercase;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    transition: .3s;
+}
+.subscriber input.submit_btn:hover{
+    background-color: #000;
+}
+
+.footer_bottom{
+    background-color: #4d4d4d;
+    color: #fff;
+    padding: 25px 0;
+}
+.footer_bottom p{
+    margin-top: 10px;
+}
+.footer_bottom a{
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+.footer_bottom .social a{
+    border-color: #fff;
+    
+}
+.footer_bottom a:hover{
+    color: #ddd;
+}
+
+
+
+
+
+
+

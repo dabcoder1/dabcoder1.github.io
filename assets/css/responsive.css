@@ -1,29 +1,227 @@
-/* Medium Layout: 1280px. */
-@media only screen and (min-width: 992px) and (max-width: 1200px) { 
-  
+/* Large Layout: 1280px. */
+@media all and (min-width: 1366px) and (max-width: 1600px){
+    /*======= Main Menu CSS =======*/   
+    .mainmenu li a {
+        font-size: 16px;
+    }
+    
+/*======= Hero Area :after CSS =======*/
+    .section.hero_area div.hero:after {
+        border-bottom: 400px solid transparent;
+        border-left: 500px solid #0064ce;
+    }
+
+
     
 }
 
-/* Tablet & mobile Layout: 768px. */
-@media only screen and (max-width: 991px) { 
-	
+
+
+
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 1201px) and (max-width: 1366px){
+    
+/*======= Main Menu CSS =======*/    
+    .mainmenu li a {
+        font-size: 16px;
+    }
+    
+/*======= Hero Area :after CSS 
+    .section.hero_area div.hero:after {
+        border-bottom: 400px solid transparent;
+        border-left: 500px solid #0064ce;
+    }
+=======*/
+    
+/*======= Hero Area :after CSS =======*/
+    .section.hero_area div.title h2 {
+        left: 130px;
+        font-size: 20px;
+    }
+    .section.hero_area div.title {
+        width: 300px;
+    }
+    .title span, .hero_text span.top_sub_title {
+        transform: rotate(-43deg);
+        margin-top: -5px;
+        margin-left: -85px;
+    }
+    .section.hero_area div.hero:after {
+        border-bottom: 325px solid transparent;
+        border-left: 355px solid #0064ce;
+    }
+    .section.hero_area div.hexagon {
+        margin-left: -7px;
+    }  
+    
+    
     
 }
+
+
+
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) { 
+  
+/*======= Main Menu CSS =======*/
+    .mainmenu li {
+        margin: 6px 8px;
+    }
+    .mainmenu li a {
+        font-size: 14px;
+    }
+    .logo {
+        width: 25%;
+    }
+    .logo h2 {
+        margin-left: 5px;
+    }
+    .menu{margin-right: 0px;}
+    
+/*======= Services Area CSS =======*/
+    .single_service {
+        width: 250px;
+        height: 250px;
+    }
+    
+    
+/*======= Hero Area :after CSS =======*/
+    .section.hero_area div.title h2 {
+        left: 130px;
+        font-size: 20px;
+    }
+    .section.hero_area div.title {
+        width: 300px;
+    }
+    .title span, .hero_text span.top_sub_title {
+        transform: rotate(-43deg);
+        margin-top: -5px;
+        margin-left: -85px;
+    }
+    .section.hero_area div.hero:after {
+        border-bottom: 325px solid transparent;
+        border-left: 345px solid #0064ce;
+    }
+    .section.hero_area div.hexagon {
+        margin-left: -7px;
+    }
+    
+    
+    
+ 
+}
+
+
 
 /* Tablet Layout: 768px. */
 @media only screen and (min-width: 768px) and (max-width: 991px) { 
  
+/*======= Main Menu CSS =======*/
+    .slicknav_menu{display: block;}
+    .logo{width: 70%;}
+    .menu{display: none;}
+    .slicknav_menu{background-color: transparent;}
+    .slicknav_nav .slicknav_row, .slicknav_nav a {
+        padding: 6px 15px;
+        margin: 0px 5px;
+        background-color: #f16400;
+    }
+    
+    /*Hero Section CSS*/
+    .section.hero_area div.title h2, .noneMode{display: none; }
+    .section.hero_area div.hero:after{display: none; }
+    .section.hero_area div.bottom_btn{margin-left: 0px;}
+    
+    
+
+    /*Portfolio Area*/
+    .element-item{
+        width: 50%;
+    }
+    
+
+    /*Contact Form CSS*/
+    .contact_form{margin-bottom: 100px;}
+    
+    
+    
+    
+    
     
 }
+
+
 
 /* Mobile Layout: 320px. */
 @media only screen and (max-width: 767px) { 
-   
+    .slicknav_menu{display: block;}
+    .logo{width: 70%;}
+    .menu{display: none;}
+    .slicknav_menu{background-color: transparent;}
+    .slicknav_nav .slicknav_row, .slicknav_nav a {
+        padding: 6px 15px;
+        margin: 0px 5px;
+        background-color: #f16400;
+    }
     
+    /*Hero Area CSS*/
+    .section.hero_area div.title h2, .noneMode{display: none; }
+    .section.hero_area div.hero:after{display: none; }
+    .section.hero_area div.hero_text{width: 490px; margin-left: -230px;}
+    .hero_text h2{font-size: 30px;}
+    .title span, .hero_text span{font-size: 13px;}
+    .hero_text a.custom_btn{padding: 7px 15px; margin-top: 5px; font-size: 15px;}
+    .hero:before{top: 320px;}
+    .hero_area .socials_link{top: 345px;}
+
+    /*Portfolio Area*/
+    .element-item{
+        width: 100%;
+    }
+
+    /*Contact Form CSS*/
+    .contact_form{margin-bottom: 100px; margin-left: 0;}
+
+
+
+
 }
+
+
+
 
 /* Wide Mobile Layout: 480px. */
 @media only screen and (min-width: 480px) and (max-width: 767px) { 
+    .slicknav_menu{display: block;}
+    .logo{width: 70%; margin-left: 20px;}
+    .menu{display: none;}
+    .slicknav_menu{background-color: transparent;}
+    .slicknav_nav .slicknav_row, .slicknav_nav a {
+        padding: 6px 15px;
+        margin: 0px 5px;
+        background-color: #f16400;
+    }
+    /*Hero Area CSS*/
+    
+    .section.hero_area div.title h2, .noneMode{display: none; }
+    .section.hero_area div.hero:after{display: none; }
+    .section.hero_area div.hero_text{width: 62%; margin-left: -230px;}
+    .hero_text h2{font-size: 38px;}
+    .title span, .hero_text span{font-size: 15px;}
+    .hero_text a.custom_btn{padding: 7px 15px; margin-top: 5px; font-size: 15px;}
+    .hero:before{top: 320px;}
+    .hero_area .socials_link{top: 343px;}
+    
+    /*Portfolio Area*/
+    .element-item{
+        width: 100%;
+    }
+
+
+
+    /*Contact Form CSS*/
+    .contact_form{margin-bottom: 100px; margin-left: 0;}
+    
 
     
 }

@@ -1,0 +1,129 @@
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) { 
+  
+.mainmenu ul li a {font-size: 15px;}
+.search_form input[type="search"] {width: 62%;}
+.portfolio-overlay h2 {margin-top: 90px; font-size: 20px;}
+.footer_area {font-size: 16px;}
+  
+  
+    
+}
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+
+.search_form form {text-align: center;}
+.search_form input[type="search"] {width: 88%; margin-bottom: 25px; height: 40px;}
+.search_form input[type="submit"] {height: 40px;}
+.about_area img {margin-top: 30px;}
+.contact{padding-left: 65px;}
+.contact i {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+	margin-left: 20px;
+}
+.contact h4 {font-size: 16px; margin-bottom: 5px;}
+.single_service {width: 80%; margin: 20px auto;}
+section#services div.space {height: 0px;}
+.button-group .button {margin-bottom: 10px;}
+.portfolio-overlay h2 {margin-top: 60px; font-size: 20px;}
+.footer_area{text-align: center;}
+.footer_area ul{margin: 20px 220px;}
+.button {padding: 7px 7px; font-size: 14px;}
+
+
+
+
+    
+}
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) { 
+
+
+.mainmenu{display: none;}
+.search_form form {padding-bottom: 18px;}
+.slicknav_menu{display: block;}
+.search_form{margin-top: 70px;}
+.search_form input[type="search"] {width: 73%; padding: 5px 5px;}
+.search_form input[type="submit"] {padding: 5px 5px; text-transform: none; font-weight: normal;}
+.hero_text h2{font-size: 27px;}
+.hero_text h1{font-size: 50px;}
+.hero_text p{font-size: 18px;}
+.hero_text a {font-size: 16px; margin-top: 25px;}
+.section_title {padding: 0px 10px;}
+.section_title h2 {font-size: 25px;}
+.about_area h2 {font-size: 22px;}
+.about_area h2:before {width: 95px; height: 3px;}
+.about_area img{margin-top: 30px;}
+.about_area img{border: 10px solid #FF0072;}
+.contact {margin-bottom: 30px;}
+.single_service {width: 80%; margin: 20px auto; height: 270px;}
+.single_service h4 {font-size: 16px;}
+section#services div.space {height: 0px;}
+.portfolio-overlay h2 {font-weight: normal; font-size: 11px; margin-top: 15px; text-transform: none;}
+.button-group .button {margin-top: 10px; text-transform: capitalize; padding: 5px 10px;}
+.contact_form input[type="text"], .contact_form input[type="number"], .contact_form input[type="email"], .contact_form textarea {
+    margin: 5px 5px;
+    width: 100%;
+}
+.contact_form textarea {width: 100%;}
+.contact_form input[type="submit"] {float: right; text-transform: capitalize; padding: 10px;}
+.contact_area {height: 610px;}
+.contact_form {padding: 0px 40px 80px;}
+.footer_area {font-size: 19px; text-align: center; line-height: 30px;}
+.footer_area span{display: block;}
+.footer_area ul {line-height: 40px; float: none; margin: 20px 35px;}
+.footer_area ul li {margin: 0px 5px;}
+
+
+ 
+ 
+ 
+ 
+ 
+	
+}
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+
+.mainmenu ul{display: none;}
+.search_form form {padding-bottom: 18px;}
+.slicknav_menu{display: block;}
+.search_form{margin-top: 0px;}
+.search_form input[type="search"] {width: 38%; padding: 5px 5px;}
+.search_form input[type="submit"] {padding: 5px 5px; text-transform: none; font-weight: normal;}
+.hero_text h2{font-size: 35px;}
+.hero_text h1{font-size: 50px;}
+.hero_text p{font-size: 22px;}
+.hero_text a {font-size: 16px;}
+.section_title {padding: 0px;}
+.section_title h2 {font-size: 35px;}
+.about_area h2 {font-size: 30px;}
+.about_area h2:before {width: 130px; height: 4px;}
+.about_area img{margin-top: 30px;}
+.about_area img{border: 20px solid #CA0FBA}
+.contact {margin-bottom: 30px;}
+.single_service {width: 80%; margin: 20px auto; height: 230px;}
+.single_service h4 {font-size: 20px;}
+section#services div.space {height: 0px;}
+.portfolio-overlay h2 {font-weight: normal; font-size: 15px; margin-top: 35px; text-transform: none;}
+.button-group .button {margin-top: 10px; text-transform: capitalize; padding: 5px 10px;}
+.contact_form input[type="text"], .contact_form input[type="number"], .contact_form input[type="email"], .contact_form textarea {
+    margin: 5px 5px;
+    width: 100%;
+}
+.contact_form textarea {width: 100%;}
+.contact_form input[type="submit"] {float: right;text-transform: uppercase; padding: 10px 20px;}
+.contact_area {height: 610px;}
+.contact_form {padding: 0px 40px 80px;}
+.footer_area {font-size: 19px; text-align: center; line-height: 30px;}
+.footer_area ul {line-height: 40px; float: none; margin: 20px 115px;}
+.footer_area ul li {margin: 0px 5px;}
+
+
+
+
+
+}
